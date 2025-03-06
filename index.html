@@ -20,9 +20,6 @@
         }
         .warning-tab {
             position: fixed;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
             background-color: #333;
             border: 2px solid red;
             border-radius: 5px;
@@ -71,8 +68,33 @@
 </head>
 <body>
     <div class="header">مزيف - متجر وهمي</div>
-    <div class="warning-tab" id="warningTab">
-        <button class="close-btn" onclick="document.getElementById('warningTab').style.display='none'">&times;</button>
+    <div class="warning-tab" id="warningTab1" style="top: 10%; left: 50%; transform: translateX(-50%);">
+        <button class="close-btn" onclick="document.getElementById('warningTab1').style.display='none'">&times;</button>
+        <div class="warning">ウイルスが検出されました！</div>
+        <div class="highlight">直ちに対応してください。</div>
+    </div>
+    <div class="warning-tab" id="warningTab2" style="top: 20%; left: 50%; transform: translateX(-50%);">
+        <button class="close-btn" onclick="document.getElementById('warningTab2').style.display='none'">&times;</button>
+        <div class="warning">ウイルスが検出されました！</div>
+        <div class="highlight">直ちに対応してください。</div>
+    </div>
+    <div class="warning-tab" id="warningTab3" style="top: 30%; left: 50%; transform: translateX(-50%);">
+        <button class="close-btn" onclick="document.getElementById('warningTab3').style.display='none'">&times;</button>
+        <div class="warning">ウイルスが検出されました！</div>
+        <div class="highlight">直ちに対応してください。</div>
+    </div>
+    <div class="warning-tab" id="warningTab4" style="top: 40%; left: 50%; transform: translateX(-50%);">
+        <button class="close-btn" onclick="document.getElementById('warningTab4').style.display='none'">&times;</button>
+        <div class="warning">ウイルスが検出されました！</div>
+        <div class="highlight">直ちに対応してください。</div>
+    </div>
+    <div class="warning-tab" id="warningTab5" style="top: 50%; left: 50%; transform: translateX(-50%);">
+        <button class="close-btn" onclick="document.getElementById('warningTab5').style.display='none'">&times;</button>
+        <div class="warning">ウイルスが検出されました！</div>
+        <div class="highlight">直ちに対応してください。</div>
+    </div>
+    <div class="warning-tab" id="warningTab6" style="top: 60%; left: 50%; transform: translateX(-50%);">
+        <button class="close-btn" onclick="document.getElementById('warningTab6').style.display='none'">&times;</button>
         <div class="warning">ウイルスが検出されました！</div>
         <div class="highlight">直ちに対応してください。</div>
     </div>
@@ -80,143 +102,142 @@
         <div class="product">
             <h2>ニンテンドースイッチ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Nintendo Switch">
-            <p>最新のニンテンドースイッチをお得な価格で手に入れよう。</p>
+            <p>أحدث إصدار من نينتندو سويتش متاح الآن بسعر رائع. يتميز هذا الجهاز بألعاب ممتعة ورسومات مذهلة. احصل على تجربتك الفريدة مع نينتندو سويتش اليوم!</p>
         </div>
         <div class="product">
             <h2>ウルトラマンフィギュア</h2>
             <img src="https://via.placeholder.com/300x200" alt="Ultraman Figure">
-            <p>限定版のウルトラマンフィギュアをコレクションに追加しよう。</p>
+            <p>تمتع بإضافة هذه النسخة المحدودة من تمثال أولترامان إلى مجموعتك. مصنوع بتفاصيل دقيقة وجودة عالية. لا تفوت فرصة الحصول على هذا التمثال الرائع.</p>
         </div>
-        <!-- Additional Products -->
         <div class="product">
-            <h2>仮面ライダーフィギュア</h2>
+            <h2>仮面ライダーフィギュア（最新シリーズ）</h2>
             <img src="https://via.placeholder.com/300x200" alt="Kamen Rider Figure">
-            <p>最新の仮面ライダーフィギュアを手に入れよう。</p>
+            <p>أحدث تمثال لشخصية كامن رايدر من السلسلة الحالية. يتميز بتصميم مذهل وتفاصيل دقيقة. احصل على هذا التمثال الرائع وأضفه إلى مجموعتك اليوم!</p>
         </div>
         <div class="product">
             <h2>プリキュアフィギュア</h2>
             <img src="https://via.placeholder.com/300x200" alt="Precure Figure">
-            <p>人気のプリキュアフィギュアをコレクションに追加しよう。</p>
+            <p>تمثال بريكيور الجديد متوفر الآن. يتميز بتصميم جميل وألوان زاهية. أضف هذا التمثال الرائع إلى مجموعتك واستمتع بتفاصيله الدقيقة.</p>
         </div>
         <div class="product">
             <h2>ドラえもんグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Doraemon Goods">
-            <p>ドラえもんのアクセサリーやグッズを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات دورايمون متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
-            <h2>戦隊ものフィギュア</h2>
+            <h2>戦隊ものフィギュア（最新シリーズ）</h2>
             <img src="https://via.placeholder.com/300x200" alt="Sentai Figure">
-            <p>最新の戦隊ものフィギュアを手に入れよう。</p>
+            <p>أحدث تمثال لشخصيات السنتاي من السلسلة الحالية. يتميز بتصميم مبدع وتفاصيل دقيقة. أضف هذا التمثال الرائع إلى مجموعتك الآن واستمتع بجودته العالية.</p>
         </div>
         <div class="product">
             <h2>ドラゴンボールフィギュア</h2>
             <img src="https://via.placeholder.com/300x200" alt="Dragon Ball Figure">
-            <p>ドラゴンボールのフィギュアをコレクションに追加しよう。</p>
+            <p>تمثال دراغون بول الجديد متوفر الآن. يتميز بتصميم رائع وتفاصيل مذهلة. أضف هذا التمثال الرائع إلى مجموعتك اليوم!</p>
         </div>
         <div class="product">
             <h2>ワンピースフィギュア</h2>
             <img src="https://via.placeholder.com/300x200" alt="One Piece Figure">
-            <p>ワンピースのフィギュアをコレクションに追加しよう。</p>
+            <p>أحدث تمثال لشخصيات ون بيس متاح الآن. يتميز بتصميم مذهل وتفاصيل دقيقة. احصل على هذا التمثال الرائع وأضفه إلى مجموعتك اليوم!</p>
         </div>
         <div class="product">
             <h2>ナルトフィギュア</h2>
             <img src="https://via.placeholder.com/300x200" alt="Naruto Figure">
-            <p>ナルトのフィギュアをコレクションに追加しよう。</p>
+            <p>تمثال ناروتو الجديد متوفر الآن. يتميز بتصميم رائع وتفاصيل مذهلة. أضف هذا التمثال الرائع إلى مجموعتك اليوم!</p>
         </div>
         <div class="product">
             <h2>ポケモングッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Pokemon Goods">
-            <p>ポケモンのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات بوكيمون متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>マリオカートセット</h2>
             <img src="https://via.placeholder.com/300x200" alt="Mario Kart Set">
-            <p>マリオカートのセットをお得な価格で手に入れよう。</p>
+            <p>مجموعة ماريو كارت الجديدة متوفرة الآن بسعر رائع. تتضمن هذه المجموعة كل ما تحتاجه لتجربة سباق ممتعة. احصل على مجموعتك اليوم!</p>
         </div>
         <div class="product">
             <h2>ゼルダの伝説グッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Zelda Goods">
-            <p>ゼルダの伝説のグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات أسطورة زيلدا متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>スプラトゥーングッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Splatoon Goods">
-            <p>スプラトゥーンのグッズをお得な価格で手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات سبلاتون متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ファイナルファンタジーグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Final Fantasy Goods">
-            <p>ファイナルファンタジーのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات فاينال فانتازي متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>キングダムハーツグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Kingdom Hearts Goods">
-            <p>キングダムハーツのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات قلوب المملكة متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>メタルギアソリッドグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Metal Gear Solid Goods">
-            <p>メタルギアソリッドのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات ميتال جير سوليد متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ソニックグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Sonic Goods">
-            <p>ソニックのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات سونيك متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>バイオハザードグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Resident Evil Goods">
-            <p>バイオハザードのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات ريزدنت إيفل متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ストリートファイターグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Street Fighter Goods">
-            <p>ストリートファイターのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات ستريت فايتر متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>鉄拳グッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Tekken Goods">
-            <p>鉄拳のグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات تيكن متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>モンスターハンターグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Monster Hunter Goods">
-            <p>モンスターハンターのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات مونستر هانتر متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ペルソナグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Persona Goods">
-            <p>ペルソナのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات بيرسونا متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ニーアオートマタグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Nier Automata Goods">
-            <p>ニーアオートマタのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات نير: أوتوماتا متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>デビルメイクライグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Devil May Cry Goods">
-            <p>デビルメイクライのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات ديفل ماي كراي متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>クラッシュバンディクーグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Crash Bandicoot Goods">
-            <p>クラッシュバンディクーのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات كراش بانديكوت متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ラチェット&クランクグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Ratchet & Clank Goods">
-            <p>ラチェット&クランクのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات راتشيت أند كلانك متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>ゴッドオブウォーグッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="God of War Goods">
-            <p>ゴッドオブウォーのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات غاد أوف وور متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
         <div class="product">
             <h2>レッドデッドリデンプショングッズ</h2>
             <img src="https://via.placeholder.com/300x200" alt="Red Dead Redemption Goods">
-            <p>レッドデッドリデンプションのグッズやアクセサリーを手に入れよう。</p>
+            <p>مجموعة رائعة من منتجات ريد ديد ريدمبشن متاحة الآن. تشمل هذه المجموعة أكسسوارات ومجسمات رائعة. احصل على هذه المنتجات الفريدة اليوم!</p>
         </div>
     </div>
     <script>
