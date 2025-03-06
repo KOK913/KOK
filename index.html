@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>偽の通販サイト</title>
+    <title>مزيف</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
         }
         .warning {
             color: red;
@@ -30,19 +38,38 @@
             z-index: 1000;
         }
         .content {
-            margin-top: 50px;
             padding: 20px;
+        }
+        .product {
+            background-color: #333;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product h2 {
+            color: #ffcc00;
         }
     </style>
 </head>
 <body>
+    <div class="header">مزيف - متجر وهمي</div>
     <div class="warning">ウイルスが検出されました！</div>
     <div class="highlight">直ちに対応してください。</div>
     <div class="content">
-        <h1>مرحبا بكم في متجرنا الوهمي</h1>
-        <p>هذا النص هو مجرد مثال لنص يمكن استبداله في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
-        <p>إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.</p>
-        <p>ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.</p>
+        <div class="product">
+            <h2>ニンテンドースイッチ</h2>
+            <img src="https://via.placeholder.com/300x200" alt="Nintendo Switch">
+            <p>最新のニンテンドースイッチをお得な価格で手に入れよう。</p>
+        </div>
+        <div class="product">
+            <h2>ウルトラマンフィギュア</h2>
+            <img src="https://via.placeholder.com/300x200" alt="Ultraman Figure">
+            <p>限定版のウルトラマンフィギュアをコレクションに追加しよう。</p>
+        </div>
     </div>
     <script>
         alert("ウイルスが検出されました！直ちに対応してください。");
