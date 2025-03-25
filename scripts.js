@@ -32,6 +32,7 @@ function startExperience() {
 
     let currentQuestion = 0;
     let score = 0;
+    const results = [];
 
     function showQuestion() {
         if (currentQuestion < questions.length) {
@@ -39,21 +40,56 @@ function startExperience() {
             simulation.innerHTML = `
                 <p>${question.question}</p>
                 <ul>
-                    ${question.choices.map((choice, index) => `<li><button class="choiceButton" onclick="chooseAnswer(${index})">${choice}</button></li>`).join('')}
+                    ${question.choices.map((choice, index) => `
+                        <li>
+                            <button class="choiceButton" onclick="chooseAnswer(${index})">${choice}</button>
+                            <div id="result-${index}" class="result-icon"></div>
+                        </li>
+                    `).join('')}
                 </ul>
             `;
         } else {
-            simulation.innerHTML = `<p>体験終了！あなたのスコアは${score}/${questions.length}です。</p>`;
+            const percentageScore = (score / questions.length) * 100;
+            simulation.innerHTML = `<p>体験終了！あなたのスコアは<span class="score">${percentageScore.toFixed(1)} / 100</span>です。</p>`;
+            simulation.innerHTML += `<p>選択肢の組み合わせとスコア:</p>`;
+            results.forEach(result => {
+                simulation.innerHTML += `<p>${result.choices.join(" -> ")} : スコア ${result.score}</p>`;
+            });
         }
     }
 
     window.chooseAnswer = function(index) {
+        const resultIcon = document.getElementById(`result-${index}`);
         if (index === questions[currentQuestion].correct) {
             score++;
+            resultIcon.classList.add('correct');
+        } else {
+            resultIcon.classList.add('incorrect');
         }
+        results.push({ choices: questions.map(q => q.choices[index]), score });
         currentQuestion++;
-        showQuestion();
+        setTimeout(showQuestion, 1000); // 1秒後に次の質問を表示
     }
 
+    function predictOutcomes() {
+        const totalQuestions = questions.length;
+        const totalChoices = questions[0].choices.length;
+        const totalOutcomes = Math.pow(totalChoices, totalQuestions);
+
+        for (let i = 0; i < totalOutcomes; i++) {
+            let outcome = [];
+            let tempScore = 0;
+            for (let j = 0; j < totalQuestions; j++) {
+                const choiceIndex = Math.floor(i / Math.pow(totalChoices, j)) % totalChoices;
+                outcome.push(questions[j].choices[choiceIndex]);
+                if (choiceIndex === questions[j].correct) {
+                    tempScore++;
+                }
+            }
+            results.push({ choices: outcome, score: tempScore });
+        }
+    }
+
+    predictOutcomes();
     showQuestion();
 }
