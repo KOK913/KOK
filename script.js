@@ -1,31 +1,75 @@
-document.getElementById('option1').addEventListener('click', function() {
-    document.getElementById('scenario-text').innerText = '高収入のバイトを選びました。次の選択肢は？';
-    document.getElementById('option1').innerText = '選択肢1: すぐに応募する';
-    document.getElementById('option2').innerText = '選択肢2: もう少し情報を調べる';
-    document.getElementById('option1').addEventListener('click', function() {
-        document.getElementById('scenario-text').innerText = 'すぐに応募しました。怪しい面接に呼ばれました。';
-        document.getElementById('option1').style.display = 'none';
-        document.getElementById('option2').style.display = 'none';
-    });
-    document.getElementById('option2').addEventListener('click', function() {
-        document.getElementById('scenario-text').innerText = 'もう少し情報を調べました。闇バイトの情報が見つかりました。';
-        document.getElementById('option1').style.display = 'none';
-        document.getElementById('option2').style.display = 'none';
-    });
-});
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* 背景を黒に変更 */
+    color: #fff; /* 文字色を白に変更 */
+}
 
-document.getElementById('option2').addEventListener('click', function() {
-    document.getElementById('scenario-text').innerText = '安全そうなバイトを選びました。次の選択肢は？';
-    document.getElementById('option1').innerText = '選択肢1: 面接に行く';
-    document.getElementById('option2').innerText = '選択肢2: 他のバイトも探す';
-    document.getElementById('option1').addEventListener('click', function() {
-        document.getElementById('scenario-text').innerText = '面接に行きました。問題なく採用されました。';
-        document.getElementById('option1').style.display = 'none';
-        document.getElementById('option2').style.display = 'none';
-    });
-    document.getElementById('option2').addEventListener('click', function() {
-        document.getElementById('scenario-text').innerText = '他のバイトも探しました。より良いバイトが見つかりました。';
-        document.getElementById('option1').style.display = 'none';
-        document.getElementById('option2').style.display = 'none';
-    });
-});
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #FFD700; /* タイトルの色を黄色に変更 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #FFD700; /* ナビゲーションリンクの色を黄色に変更 */
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #333; /* セクション背景を黒に変更 */
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+section h2 {
+    border-bottom: 2px solid #FFD700; /* セクションタイトルの下線色を黄色に変更 */
+    padding-bottom: 0.5rem;
+    color: #FFD700; /* セクションタイトルの色を黄色に変更 */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #FFD700; /* フッターの文字色を黄色に変更 */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button {
+    background-color: #FFD700; /* ボタンの背景色を黄色に変更 */
+    color: #000; /* ボタンの文字色を黒に変更 */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FFA500; /* ホバー時のボタン背景色をオレンジに変更 */
+}
