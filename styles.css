@@ -64,9 +64,10 @@ button {
     background-color: #000; /* ボタンの背景色を黒に変更 */
     color: #fff; /* ボタンの文字色を白に変更 */
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem; /* サイズを大きくする */
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.2rem; /* 文字サイズを大きくする */
 }
 
 button:hover {
@@ -75,8 +76,8 @@ button:hover {
 
 img {
     display: block;
-    margin: 1rem auto;
-    max-width: 100%;
+    margin: 2rem auto 0 auto; /* 右斜め前に移動 */
+    max-width: 200%; /* 画像のサイズを2倍に変更 */
     height: auto;
     border: 2px solid #000; /* 画像の周りに黒い枠を追加 */
 }
