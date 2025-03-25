@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const startButton = document.getElementById('startButton');
+    startButton.addEventListener('click', startExperience);
+});
+
 function startExperience() {
     const simulation = document.getElementById('simulation');
     simulation.innerHTML = '';
