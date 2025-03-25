@@ -132,41 +132,16 @@ function startExperience() {
     ];
 
     const comments = [
-        "よく考えた結果です。",
-        "慎重に行動しました。",
+        "素晴らしい！完璧な判断です。",
+        "非常に良い判断です。",
+        "とても良い選択をしました。",
         "良い判断です。",
-        "もう少し考えたほうが良いかもしれません。",
-        "リスクを理解しました。",
-        "安全を優先しました。",
-        "注意深く調査しました。",
-        "適切な判断です。",
-        "警戒心を持ちました。",
-        "冷静に対処しました。",
-        "賢明な選択です。",
-        "疑わしい点を見逃しませんでした。",
-        "慎重に進めました。",
-        "賢明な判断です。",
-        "リスクを最小限に抑えました。",
-        "良い選択肢を選びました。",
-        "常識を持って行動しました。",
-        "賢い判断です。",
-        "リスクを理解しました。",
-        "安全な選択をしました。",
-        "警戒心を持ちました。",
-        "冷静な判断です。",
-        "適切に対応しました。",
-        "慎重に考えました。",
-        "警戒心を持ちました。",
-        "賢明な判断です。",
-        "リスクを理解しました。",
-        "安全な選択をしました。",
-        "慎重に行動しました。",
-        "適切な判断です。",
-        "冷静に対処しました。",
-        "常識を持って行動しました。",
-        "賢い判断です。",
-        "良い選択肢を選びました。",
-        // ... ここに他のコメントを追加してください ...
+        "おしい！もう少し注意が必要です。",
+        "まあまあの判断です。",
+        "もう少し考える必要があります。",
+        "少しリスクが高い判断です。",
+        "注意が必要です。",
+        "危険な判断です。改善が必要です。"
     ];
 
     let currentQuestion = 0;
@@ -189,14 +164,28 @@ function startExperience() {
             `;
         } else {
             const percentageScore = (score / questions.length) * 100;
+            const finalComment = getComment(percentageScore);
             simulation.innerHTML = `<p>体験終了！あなたのスコアは<span class="score">${percentageScore.toFixed(1)} / 100</span>です。</p>`;
+            simulation.innerHTML += `<p>${finalComment}</p>`;
             simulation.innerHTML += `<p>選択肢の組み合わせとスコア:</p>`;
             results.forEach((result, index) => {
-                const comment = comments[index % comments.length]; // コメントを順番に使用
                 const percentageScoreResult = (result.score / questions.length) * 100;
-                simulation.innerHTML += `<p>${result.choices.join(" -> ")} : スコア <span class="score">${percentageScoreResult.toFixed(1)} / 100</span> - ${comment}</p>`;
+                simulation.innerHTML += `<p>${result.choices.join(" -> ")} : スコア <span class="score">${percentageScoreResult.toFixed(1)} / 100</span></p>`;
             });
         }
+    }
+
+    function getComment(score) {
+        if (score >= 90) return comments[0];
+        if (score >= 80) return comments[1];
+        if (score >= 70) return comments[2];
+        if (score >= 60) return comments[3];
+        if (score >= 50) return comments[4];
+        if (score >= 40) return comments[5];
+        if (score >= 30) return comments[6];
+        if (score >= 20) return comments[7];
+        if (score >= 10) return comments[8];
+        return comments[9];
     }
 
     window.chooseAnswer = function(index) {
