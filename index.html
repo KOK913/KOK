@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>闇バイト体験サイト</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css">
 </head>
 <body>
     <header>
@@ -40,18 +40,22 @@
         </section>
         <section id="video">
             <h2>動画コーナー</h2>
-            <video controls width="600">
+            <video controls width="600" loading="lazy">
                 <source src="myvideo.mp4" type="video/mp4">
                 お使いのブラウザは動画タグに対応していません。
             </video>
         </section>
         <section id="image">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YtqG43rouXiAf6Wy74A7_Y-IYjkuuGCpmg&s" alt="大阪府警察特殊詐欺被害防止キャラクター">
+            <picture>
+                <source srcset="path/to/image.webp" type="image/webp">
+                <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YtqG43rouXiAf6Wy74A7_Y-IYjkuuGCpmg&s" type="image/jpeg">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YtqG43rouXiAf6Wy74A7_Y-IYjkuuGCpmg&s" alt="大阪府警察特殊詐欺被害防止キャラクター" loading="lazy">
+            </picture>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 闇バイト体験サイト</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="scripts.min.js" async></script>
 </body>
 </html>
