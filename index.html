@@ -9,19 +9,39 @@
 <body>
     <header>
         <h1>闇バイト体験サイト</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">闇バイトとは</a></li>
+                <li><a href="#hints">ヒント</a></li>
+                <li><a href="#experience">体験コーナー</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id="introduction">
-            <h2>闇バイトとは？</h2>
-            <p>闇バイトに騙される人の体験をシミュレーションしましょう。選択肢を選んで、どのような展開になるかを見てみましょう。</p>
+        <section id="about">
+            <h2>闇バイトとは</h2>
+            <p>闇バイトとは、違法な仕事や詐欺的な求人のことを指します。これらの仕事は違法であり、関わると法的なトラブルに巻き込まれる可能性があります。</p>
         </section>
-        <section id="scenario">
-            <h2>シナリオ</h2>
-            <p id="scenario-text">あなたは新しいバイトを探しています...</p>
-            <button id="option1">選択肢1: 高収入のバイトを見つけた</button>
-            <button id="option2">選択肢2: 安全そうなバイトを選んだ</button>
+        <section id="hints">
+            <h2>ヒント</h2>
+            <ul>
+                <li>怪しい求人には注意しましょう。</li>
+                <li>高額な報酬を約束する仕事は疑ってかかること。</li>
+                <li>個人情報を安易に教えないことが重要です。</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>体験コーナー</h2>
+            <p>ここでは、実際に闇バイトに騙される体験をシミュレーションできます。</p>
+            <button onclick="startExperience()">体験を始める</button>
+            <div id="simulation">
+                <!-- 体験シミュレーションの内容がここに表示されます -->
+            </div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2025 闇バイト体験サイト</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
