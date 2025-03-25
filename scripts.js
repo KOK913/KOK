@@ -39,7 +39,7 @@ function startExperience() {
             simulation.innerHTML = `
                 <p>${question.question}</p>
                 <ul>
-                    ${question.choices.map((choice, index) => `<li><button onclick="chooseAnswer(${index})">${choice}</button></li>`).join('')}
+                    ${question.choices.map((choice, index) => `<li><button class="choiceButton" onclick="chooseAnswer(${index})">${choice}</button></li>`).join('')}
                 </ul>
             `;
         } else {
