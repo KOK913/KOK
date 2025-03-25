@@ -60,17 +60,32 @@ footer {
     bottom: 0;
 }
 
-button {
+button#startButton {
+    background-color: #000; /* ボタンの背景色を黒に変更 */
+    color: #fff; /* ボタンの文字色を白に変更 */
+    border: none;
+    padding: 2rem 4rem; /* サイズを3倍にする */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 3em; /* 文字サイズを3倍にする */
+}
+
+button#startButton:hover {
+    background-color: #333; /* ホバー時のボタン背景色をダークグレーに変更 */
+}
+
+button.choiceButton {
     background-color: #000; /* ボタンの背景色を黒に変更 */
     color: #fff; /* ボタンの文字色を白に変更 */
     border: none;
     padding: 1rem 2rem; /* サイズを大きくする */
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1.2rem; /* 文字サイズを大きくする */
+    font-size: 3em; /* 文字サイズを3倍にする */
+    margin-right: 1rem; /* 画像のためのスペースを確保 */
 }
 
-button:hover {
+button.choiceButton:hover {
     background-color: #333; /* ホバー時のボタン背景色をダークグレーに変更 */
 }
 
@@ -80,4 +95,25 @@ img {
     max-width: 200%; /* 画像のサイズを2倍に変更 */
     height: auto;
     border: 2px solid #000; /* 画像の周りに黒い枠を追加 */
+}
+
+.result-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+.correct {
+    background-color: red; /* 正解の赤い丸 */
+}
+
+.incorrect {
+    background-color: blue; /* 不正解の青い× */
+    clip-path: polygon(0% 20%, 20% 0%, 50% 30%, 80% 0%, 100% 20%, 70% 50%, 100% 80%, 80% 100%, 50% 70%, 20% 100%, 0% 80%, 30% 50%);
+}
+
+.score {
+    text-decoration: underline red; /* スコアに赤のアンダーラインを追加 */
 }
