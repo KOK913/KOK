@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -18,6 +18,8 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -28,6 +30,7 @@ nav ul li {
 nav ul li a {
     color: #fff; /* 白 */
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
@@ -37,20 +40,34 @@ main {
 h1, h2 {
     color: #fff; /* 白 */
     border-bottom: 1px solid #fff; /* 白の下線 */
+    padding-bottom: 0.5rem;
 }
 
 #quiz {
     margin-top: 2rem;
+    text-align: center;
 }
 
 #choices button {
     display: block;
-    margin: 0.5rem 0;
+    margin: 0.5rem auto;
     padding: 0.5rem 1rem;
-    width: 100%;
+    width: 80%;
     background-color: #fff; /* 白 */
     color: #000; /* 黒 */
     border: 2px solid #000; /* 黒のボーダー */
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#nextButton {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff; /* 白 */
+    color: #000; /* 黒 */
+    border: 2px solid #000; /* 黒のボーダー */
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .correct {
@@ -61,4 +78,8 @@ h1, h2 {
 .incorrect {
     color: red;
     font-weight: bold;
+}
+
+#result {
+    text-align: center;
 }
