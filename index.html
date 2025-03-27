@@ -3,59 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>闇バイト体験サイト</title>
-    <link rel="stylesheet" href="styles.min.css">
+    <title>闇バイト防止サイト</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>闇バイト体験サイト</h1>
+        <h1>闇バイト防止サイト</h1>
         <nav>
             <ul>
-                <li><a href="#about">闇バイトとは</a></li>
-                <li><a href="#prevention">犯行加担防止対策</a></li>
-                <li><a href="#experience">体験コーナー</a></li>
+                <li><a href="#whatis">闇バイトとは</a></li>
+                <li><a href="#measures">対策</a></li>
+                <li><a href="#experience">体験</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="about">
+        <section id="whatis">
             <h2>闇バイトとは</h2>
-            <p>『闇バイト』は犯罪実行者の募集です。 SNSやインターネットの掲示板には、仕事の内容を明らかにせずに著しく高額な報酬の支払いを示唆するなどして犯罪の実行者を募集する投稿が掲載されています。 「簡単に高収入を得られるなら」と応募して、強盗や詐欺といった犯罪に加担することとなり、逮捕された人が多くいます。</p>
+            <p>闇バイトは、違法な仕事や危険な仕事を指し、報酬が高いという理由で若者を誘うことが多いです。これらの仕事はしばしば犯罪に関連しており、関与すると重大なリスクを伴います。</p>
         </section>
-        <section id="prevention">
-            <h2>犯行加担防止対策</h2>
+        <section id="measures">
+            <h2>対策</h2>
+            <p>闇バイトを避けるためには、以下の対策が有効です:</p>
             <ul>
-                <li>求人内容・勤務条件から考えて、高額報酬が提示されている</li>
-                <li>具体的な業務内容を説明しているようで、実際は全く説明されていない</li>
-                <li>求人内容から当然必要となる資格や免許が求められない</li>
+                <li>怪しい求人には応募しない</li>
+                <li>報酬が異常に高い場合は注意する</li>
+                <li>信頼できる人や機関に相談する</li>
+                <li>身分証明書を提供しない</li>
             </ul>
         </section>
         <section id="experience">
-            <h2>体験コーナー</h2>
-            <p>ここでは、実際に闇バイトに騙される体験をシミュレーションできます。</p>
-            <button id="startButton">体験を始める</button>
-            <div id="simulation">
-                <!-- 体験シミュレーションの内容がここに表示されます -->
+            <h2>体験</h2>
+            <div id="quiz">
+                <p id="question"></p>
+                <div id="choices"></div>
+                <button id="nextButton" onclick="nextQuestion()">次へ</button>
+            </div>
+            <div id="result" style="display: none;">
+                <h3>結果</h3>
+                <p id="score"></p>
+                <p id="evaluation"></p>
             </div>
         </section>
-        <section id="video">
-            <h2>動画コーナー</h2>
-            <video controls width="600" loading="lazy">
-                <source src="myvideo.mp4" type="video/mp4">
-                お使いのブラウザは動画タグに対応していません。
-            </video>
-        </section>
-        <section id="image">
-            <picture>
-                <source srcset="path/to/image.webp" type="image/webp">
-                <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YtqG43rouXiAf6Wy74A7_Y-IYjkuuGCpmg&s" type="image/jpeg">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YtqG43rouXiAf6Wy74A7_Y-IYjkuuGCpmg&s" alt="大阪府警察特殊詐欺被害防止キャラクター" loading="lazy">
-            </picture>
-        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 闇バイト体験サイト</p>
-    </footer>
-    <script src="scripts.min.js" async></script>
+    <script src="script.js"></script>
 </body>
 </html>
