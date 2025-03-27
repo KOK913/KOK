@@ -14,6 +14,7 @@
                 <li><a href="#whatis">闇バイトとは</a></li>
                 <li><a href="#measures">対策</a></li>
                 <li><a href="#experience">体験</a></li>
+                <li><a href="#feedback">感想</a></li>
             </ul>
         </nav>
     </header>
@@ -43,6 +44,18 @@
                 <h3>結果</h3>
                 <p id="score"></p>
                 <p id="evaluation"></p>
+                <button id="restartButton" onclick="restartQuiz()">再スタート</button>
+            </div>
+        </section>
+        <section id="feedback">
+            <h2>感想</h2>
+            <form id="feedbackForm">
+                <textarea id="userFeedback" rows="4" cols="50" placeholder="感想を書き込んでください..."></textarea><br>
+                <button type="button" onclick="submitFeedback()">送信</button>
+            </form>
+            <div id="feedbackMessages">
+                <h3>皆さんの感想</h3>
+                <ul id="feedbackList"></ul>
             </div>
         </section>
     </main>
