@@ -48,4 +48,54 @@
     </main>
     <script src="script.js"></script>
 </body>
+</html><!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闇バイト防止サイト</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>闇バイト防止サイト</h1>
+        <nav>
+            <ul>
+                <li><a href="#whatis">闇バイトとは</a></li>
+                <li><a href="#measures">対策</a></li>
+                <li><a href="#experience">体験</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="whatis">
+            <h2>闇バイトとは</h2>
+            <p>闇バイトは、違法な仕事や危険な仕事を指し、報酬が高いという理由で若者を誘うことが多いです。これらの仕事はしばしば犯罪に関連しており、関与すると重大なリスクを伴います。</p>
+        </section>
+        <section id="measures">
+            <h2>対策</h2>
+            <p>闇バイトを避けるためには、以下の対策が有効です:</p>
+            <ul>
+                <li>怪しい求人には応募しない</li>
+                <li>報酬が異常に高い場合は注意する</li>
+                <li>信頼できる人や機関に相談する</li>
+                <li>身分証明書を提供しない</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>体験</h2>
+            <div id="quiz">
+                <p id="question"></p>
+                <div id="choices"></div>
+                <button id="nextButton" onclick="nextQuestion()">次へ</button>
+            </div>
+            <div id="result" style="display: none;">
+                <h3>結果</h3>
+                <p id="score"></p>
+                <p id="evaluation"></p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
 </html>
