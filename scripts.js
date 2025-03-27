@@ -108,6 +108,7 @@ const quizData = {
 
 let currentStep = "start";
 let score = 0;
+let selectedAnswer = false;
 
 function loadQuestion() {
     const quiz = document.getElementById('quiz');
@@ -126,26 +127,41 @@ function loadQuestion() {
         choicesEl.appendChild(button);
     }
 
-    if (Object.keys(choices).length === 0) {
-        nextButton.style.display = 'none';
-    } else {
-        nextButton.style.display = 'block';
-    }
+    nextButton.style.display = 'none';
 }
 
 function selectAnswer(choice, button) {
-    if (choice === quizData[currentStep].correct) {
+    selectedAnswer = true;
+    const correctChoice = quizData[currentStep].correct;
+
+    if (quizData[currentStep].correct && choice === correctChoice) {
         score++;
         button.classList.add('correct');
     } else {
         button.classList.add('incorrect');
     }
-    currentStep = quizData[currentStep].choices[choice];
-    loadQuestion();
+
+    const choicesButtons = document.querySelectorAll('#choices button');
+    choicesButtons.forEach(btn => btn.disabled = true);
+
+    const correctElement = document.createElement('span');
+    correctElement.innerText = quizData[currentStep].correct ? ' 正解' : ' 不正解';
+    correctElement.classList.add(quizData[currentStep].correct && choice === correctChoice ? 'correct' : 'incorrect');
+    button.appendChild(correctElement);
+
+    document.getElementById('nextButton').style.display = 'block';
 }
 
 function nextQuestion() {
-    loadQuestion();
+    if (!selectedAnswer) return;
+    selectedAnswer = false;
+
+    currentStep = quizData[currentStep].choices[Object.keys(quizData[currentStep].choices)[0]];
+    if (!currentStep) {
+        showResult();
+    } else {
+        loadQuestion();
+    }
 }
 
 function showResult() {
