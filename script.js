@@ -108,7 +108,6 @@ const quizData = {
 
 let currentStep = "start";
 let score = 0;
-let selectedAnswer = false;
 
 function loadQuestion() {
     const quiz = document.getElementById('quiz');
@@ -131,7 +130,6 @@ function loadQuestion() {
 }
 
 function selectAnswer(choice, button) {
-    selectedAnswer = true;
     const correctChoice = quizData[currentStep].correct;
 
     if (quizData[currentStep].correct && choice === correctChoice) {
@@ -145,7 +143,7 @@ function selectAnswer(choice, button) {
     choicesButtons.forEach(btn => btn.disabled = true);
 
     const correctElement = document.createElement('span');
-    correctElement.innerText = quizData[currentStep].correct ? ' 正解' : ' 不正解';
+    correctElement.innerText = quizData[currentStep].correct && choice === correctChoice ? ' 正解' : ' 不正解';
     correctElement.classList.add(quizData[currentStep].correct && choice === correctChoice ? 'correct' : 'incorrect');
     button.appendChild(correctElement);
 
@@ -153,14 +151,13 @@ function selectAnswer(choice, button) {
 }
 
 function nextQuestion() {
-    if (!selectedAnswer) return;
-    selectedAnswer = false;
+    const nextStep = quizData[currentStep].choices[Object.keys(quizData[currentStep].choices).find(choice => quizData[currentStep].choices[choice])];
+    currentStep = nextStep;
 
-    currentStep = quizData[currentStep].choices[Object.keys(quizData[currentStep].choices)[0]];
-    if (!currentStep) {
-        showResult();
-    } else {
+    if (!currentStep.startsWith('q_end')) {
         loadQuestion();
+    } else {
+        showResult();
     }
 }
 
